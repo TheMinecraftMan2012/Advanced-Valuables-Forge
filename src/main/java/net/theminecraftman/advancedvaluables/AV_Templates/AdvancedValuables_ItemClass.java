@@ -1,14 +1,14 @@
 package net.theminecraftman.advancedvaluables.AV_Templates;
 
+import net.minecraft.core.Holder;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.theminecraftman.advancedvaluables.AV_ToolComponents.ToolTiers.AdvancedValuables_ToolsTier;
+import net.theminecraftman.advancedvaluables.AV_ToolComponents.AdvancedValuables_ArmorMaterials;
+import net.theminecraftman.advancedvaluables.AV_ToolComponents.AdvancedValuables_ToolsTier;
 import net.theminecraftman.advancedvaluables.AdvancedValuables;
-
-import java.util.function.Supplier;
 
 public class AdvancedValuables_ItemClass
 {
@@ -110,6 +110,151 @@ public class AdvancedValuables_ItemClass
     public static final RegistryObject<Item> FUSION_SWORD = registerFireResistantSwordItem("fusion_sword", AdvancedValuables_ToolsTier.FUSION_TOOL_TIER);
 
     public static final RegistryObject<Item> RUBY_SWORD = registerSwordItem("ruby_sword", AdvancedValuables_ToolsTier.RUBY_TOOL_TIER);
+
+    // -- Armors -- //
+    public static final RegistryObject<Item> RED_SAPPHIRE_HELMET = ITEMS.register("red_sapphire_helmet",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.RED_SAPPHIRE, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(15))));
+
+    public static final RegistryObject<Item> RED_SAPPHIRE_CHESTPLATE = ITEMS.register("red_sapphire_chestplate",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.RED_SAPPHIRE, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(15))));
+
+    public static final RegistryObject<Item> RED_SAPPHIRE_LEGGINGS = ITEMS.register("red_sapphire_leggings",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.RED_SAPPHIRE, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(15))));
+
+    public static final RegistryObject<Item> RED_SAPPHIRE_BOOTS = ITEMS.register("red_sapphire_boots",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.RED_SAPPHIRE, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(15))));
+
+    public static final RegistryObject<Item> BLUE_SAPPHIRE_HELMET = ITEMS.register("blue_sapphire_helmet",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.BLUE_SAPPHIRE, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(15))));
+
+    public static final RegistryObject<Item> BLUE_SAPPHIRE_CHESTPLATE = ITEMS.register("blue_sapphire_chestplate",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.BLUE_SAPPHIRE, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(15))));
+
+    public static final RegistryObject<Item> BLUE_SAPPHIRE_LEGGINGS = ITEMS.register("blue_sapphire_leggings",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.BLUE_SAPPHIRE, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(15))));
+
+    public static final RegistryObject<Item> BLUE_SAPPHIRE_BOOTS = ITEMS.register("blue_sapphire_boots",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.BLUE_SAPPHIRE, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(15))));
+
+    public static final RegistryObject<Item> GREEN_SAPPHIRE_HELMET = ITEMS.register("green_sapphire_helmet",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.GREEN_SAPPHIRE, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(15))));
+
+    public static final RegistryObject<Item> GREEN_SAPPHIRE_CHESTPLATE = ITEMS.register("green_sapphire_chestplate",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.GREEN_SAPPHIRE, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(15))));
+
+    public static final RegistryObject<Item> GREEN_SAPPHIRE_LEGGINGS = ITEMS.register("green_sapphire_leggings",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.GREEN_SAPPHIRE, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(15))));
+
+    public static final RegistryObject<Item> GREEN_SAPPHIRE_BOOTS = ITEMS.register("green_sapphire_boots",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.GREEN_SAPPHIRE, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(15))));
+
+    public static final RegistryObject<Item> RED_GARNET_HELMET = ITEMS.register("red_garnet_helmet",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.RED_GARNET, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(18))));
+
+    public static final RegistryObject<Item> RED_GARNET_CHESTPLATE = ITEMS.register("red_garnet_chestplate",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.RED_GARNET, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(18))));
+
+    public static final RegistryObject<Item> RED_GARNET_LEGGINGS = ITEMS.register("red_garnet_leggings",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.RED_GARNET, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(18))));
+
+    public static final RegistryObject<Item> RED_GARNET_BOOTS = ITEMS.register("red_garnet_boots",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.RED_GARNET, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(18))));
+
+    public static final RegistryObject<Item> BLUE_GARNET_HELMET = ITEMS.register("blue_garnet_helmet",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.BLUE_GARNET, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(18))));
+
+    public static final RegistryObject<Item> BLUE_GARNET_CHESTPLATE = ITEMS.register("blue_garnet_chestplate",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.BLUE_GARNET, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(18))));
+
+    public static final RegistryObject<Item> BLUE_GARNET_LEGGINGS = ITEMS.register("blue_garnet_leggings",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.BLUE_GARNET, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(18))));
+
+    public static final RegistryObject<Item> BLUE_GARNET_BOOTS = ITEMS.register("blue_garnet_boots",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.BLUE_GARNET, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(18))));
+
+    public static final RegistryObject<Item> PINK_GARNET_HELMET = ITEMS.register("pink_garnet_helmet",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.PINK_GARNET, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(18))));
+
+    public static final RegistryObject<Item> PINK_GARNET_CHESTPLATE = ITEMS.register("pink_garnet_chestplate",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.PINK_GARNET, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(18))));
+
+    public static final RegistryObject<Item> PINK_GARNET_LEGGINGS = ITEMS.register("pink_garnet_leggings",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.PINK_GARNET, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(18))));
+
+    public static final RegistryObject<Item> PINK_GARNET_BOOTS = ITEMS.register("pink_garnet_boots",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.PINK_GARNET, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(18))));
+
+    public static final RegistryObject<Item> YELLOW_GARNET_HELMET = ITEMS.register("yellow_garnet_helmet",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.YELLOW_GARNET, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(18))));
+
+    public static final RegistryObject<Item> YELLOW_GARNET_CHESTPLATE = ITEMS.register("yellow_garnet_chestplate",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.YELLOW_GARNET, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(18))));
+
+    public static final RegistryObject<Item> YELLOW_GARNET_LEGGINGS = ITEMS.register("yellow_garnet_leggings",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.YELLOW_GARNET, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(18))));
+
+    public static final RegistryObject<Item> YELLOW_GARNET_BOOTS = ITEMS.register("yellow_garnet_boots",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.YELLOW_GARNET, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(18))));
+
+    public static final RegistryObject<Item> FUSION_HELMET = ITEMS.register("fusion_helmet",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.FUSION_GEM, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(50))));
+
+    public static final RegistryObject<Item> FUSION_CHESTPLATE = ITEMS.register("fusion_chestplate",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.FUSION_GEM, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(50))));
+
+    public static final RegistryObject<Item> FUSION_LEGGINGS = ITEMS.register("fusion_leggings",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.FUSION_GEM, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(50))));
+
+    public static final RegistryObject<Item> FUSION_BOOTS = ITEMS.register("fusion_boots",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.FUSION_GEM, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(50))));
+
+    public static final RegistryObject<Item> RUBY_HELMET = ITEMS.register("ruby_helmet",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.RUBY, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(40))));
+
+    public static final RegistryObject<Item> RUBY_CHESTPLATE = ITEMS.register("ruby_chestplate",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.RUBY, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(40))));
+
+    public static final RegistryObject<Item> RUBY_LEGGINGS = ITEMS.register("ruby_leggings",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.RUBY, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(40))));
+
+    public static final RegistryObject<Item> RUBY_BOOTS = ITEMS.register("ruby_boots",
+            () -> new ArmorItem(AdvancedValuables_ArmorMaterials.RUBY, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(40))));
 
     private static RegistryObject<Item> registerPickaxeItem(String name, Tier tier)
     {

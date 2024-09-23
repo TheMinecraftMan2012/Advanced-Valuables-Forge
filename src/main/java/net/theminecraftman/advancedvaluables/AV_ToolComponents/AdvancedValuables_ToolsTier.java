@@ -1,4 +1,4 @@
-package net.theminecraftman.advancedvaluables.AV_ToolComponents.ToolTiers;
+package net.theminecraftman.advancedvaluables.AV_ToolComponents;
 
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
