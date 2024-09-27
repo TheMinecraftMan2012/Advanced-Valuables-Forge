@@ -142,6 +142,16 @@ public class AdvancedValuables_ItemModelProvider extends ItemModelProvider
         handheldItem(AdvancedValuables_ItemClass.RUBY_SHOVEL);
         handheldItem(AdvancedValuables_ItemClass.RUBY_HOE);
         handheldItem(AdvancedValuables_ItemClass.RUBY_SWORD);
+
+        basicItem(AdvancedValuables_ItemClass.RED_SAPPHIRE_APPLE.get());
+        basicItem(AdvancedValuables_ItemClass.BLUE_SAPPHIRE_APPLE.get());
+        basicItem(AdvancedValuables_ItemClass.GREEN_SAPPHIRE_APPLE.get());
+        basicItem(AdvancedValuables_ItemClass.RED_GARNET_APPLE.get());
+        basicItem(AdvancedValuables_ItemClass.BLUE_GARNET_APPLE.get());
+        basicItem(AdvancedValuables_ItemClass.PINK_GARNET_APPLE.get());
+        basicItem(AdvancedValuables_ItemClass.YELLOW_GARNET_APPLE.get());
+        basicItem(AdvancedValuables_ItemClass.FUSION_APPLE.get());
+        basicItem(AdvancedValuables_ItemClass.RUBY_APPLE.get());
     }
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {

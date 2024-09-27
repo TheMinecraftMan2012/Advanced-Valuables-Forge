@@ -1,44 +1,46 @@
 package net.theminecraftman.advancedvaluables.AV_Templates;
 
-import net.minecraft.core.Holder;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.theminecraftman.advancedvaluables.AV_Templates.FoodComponents.AdvancedValuables_FoodProperties;
 import net.theminecraftman.advancedvaluables.AV_ToolComponents.AdvancedValuables_ArmorMaterials;
 import net.theminecraftman.advancedvaluables.AV_ToolComponents.AdvancedValuables_ToolsTier;
 import net.theminecraftman.advancedvaluables.AdvancedValuables;
+
+import java.util.function.Supplier;
 
 public class AdvancedValuables_ItemClass
 {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, AdvancedValuables.MOD_ID);
 
-    public static final RegistryObject<Item> BLUE_SAPPHIRE = registerItem("blue_sapphire");
-    public static final RegistryObject<Item> RED_SAPPHIRE = registerItem("red_sapphire");
-    public static final RegistryObject<Item> GREEN_SAPPHIRE = registerItem("green_sapphire");
+    public static final RegistryObject<Item> BLUE_SAPPHIRE = registerSimpleItem("blue_sapphire");
+    public static final RegistryObject<Item> RED_SAPPHIRE = registerSimpleItem("red_sapphire");
+    public static final RegistryObject<Item> GREEN_SAPPHIRE = registerSimpleItem("green_sapphire");
 
-    public static final RegistryObject<Item> RED_GARNET = registerItem("red_garnet");
-    public static final RegistryObject<Item> BLUE_GARNET = registerItem("blue_garnet");
-    public static final RegistryObject<Item> PINK_GARNET = registerItem("pink_garnet");
-    public static final RegistryObject<Item> YELLOW_GARNET = registerItem("yellow_garnet");
+    public static final RegistryObject<Item> RED_GARNET = registerSimpleItem("red_garnet");
+    public static final RegistryObject<Item> BLUE_GARNET = registerSimpleItem("blue_garnet");
+    public static final RegistryObject<Item> PINK_GARNET = registerSimpleItem("pink_garnet");
+    public static final RegistryObject<Item> YELLOW_GARNET = registerSimpleItem("yellow_garnet");
 
     public static final RegistryObject<Item> FUSION_GEM = registerFireResistantItem("fusion_gem");
 
-    public static final RegistryObject<Item> RUBY = registerItem("ruby");
+    public static final RegistryObject<Item> RUBY = registerSimpleItem("ruby");
 
-    public static final RegistryObject<Item> BLUE_RAW_SAPPHIRE = registerItem("blue_raw_sapphire");
-    public static final RegistryObject<Item> RED_RAW_SAPPHIRE = registerItem("red_raw_sapphire");
-    public static final RegistryObject<Item> GREEN_RAW_SAPPHIRE = registerItem("green_raw_sapphire");
+    public static final RegistryObject<Item> BLUE_RAW_SAPPHIRE = registerSimpleItem("blue_raw_sapphire");
+    public static final RegistryObject<Item> RED_RAW_SAPPHIRE = registerSimpleItem("red_raw_sapphire");
+    public static final RegistryObject<Item> GREEN_RAW_SAPPHIRE = registerSimpleItem("green_raw_sapphire");
 
-    public static final RegistryObject<Item> RED_RAW_GARNET = registerItem("red_raw_garnet");
-    public static final RegistryObject<Item> BLUE_RAW_GARNET = registerItem("blue_raw_garnet");
-    public static final RegistryObject<Item> PINK_RAW_GARNET = registerItem("pink_raw_garnet");
-    public static final RegistryObject<Item> YELLOW_RAW_GARNET = registerItem("yellow_raw_garnet");
+    public static final RegistryObject<Item> RED_RAW_GARNET = registerSimpleItem("red_raw_garnet");
+    public static final RegistryObject<Item> BLUE_RAW_GARNET = registerSimpleItem("blue_raw_garnet");
+    public static final RegistryObject<Item> PINK_RAW_GARNET = registerSimpleItem("pink_raw_garnet");
+    public static final RegistryObject<Item> YELLOW_RAW_GARNET = registerSimpleItem("yellow_raw_garnet");
 
     public static final RegistryObject<Item> RAW_FUSION_GEM = registerFireResistantItem("raw_fusion_gem");
 
-    public static final RegistryObject<Item> RAW_RUBY = registerItem("raw_ruby");
+    public static final RegistryObject<Item> RAW_RUBY = registerSimpleItem("raw_ruby");
 
     // -- Tools & Armor -- //
     // -- Pickaxes -- //
@@ -256,6 +258,19 @@ public class AdvancedValuables_ItemClass
             () -> new ArmorItem(AdvancedValuables_ArmorMaterials.RUBY, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(40))));
 
+    // -- Food Items -- //
+    public static final RegistryObject<Item> RED_SAPPHIRE_APPLE = ITEMS.register("red_sapphire_apple", () -> new Item(new Item.Properties().food(AdvancedValuables_FoodProperties.RED_SAPPHIRE_APPLE)));
+    public static final RegistryObject<Item> BLUE_SAPPHIRE_APPLE = ITEMS.register("blue_sapphire_apple", () -> new Item(new Item.Properties().food(AdvancedValuables_FoodProperties.BLUE_SAPPHIRE_APPLE)));
+    public static final RegistryObject<Item> GREEN_SAPPHIRE_APPLE = ITEMS.register("green_sapphire_apple", () -> new Item(new Item.Properties().food(AdvancedValuables_FoodProperties.GREEN_SAPPHIRE_APPLE)));
+
+    public static final RegistryObject<Item> RED_GARNET_APPLE = ITEMS.register("red_garnet_apple", () -> new Item(new Item.Properties().food(AdvancedValuables_FoodProperties.RED_GARNET_APPLE)));
+    public static final RegistryObject<Item> BLUE_GARNET_APPLE = ITEMS.register("blue_garnet_apple", () -> new Item(new Item.Properties().food(AdvancedValuables_FoodProperties.BLUE_GARNET_APPLE)));
+    public static final RegistryObject<Item> PINK_GARNET_APPLE = ITEMS.register("pink_garnet_apple", () -> new Item(new Item.Properties().food(AdvancedValuables_FoodProperties.PINK_GARNET_APPLE)));
+    public static final RegistryObject<Item> YELLOW_GARNET_APPLE = ITEMS.register("yellow_garnet_apple", () -> new Item(new Item.Properties().food(AdvancedValuables_FoodProperties.YELLOW_GARNET_APPLE)));
+
+    public static final RegistryObject<Item> FUSION_APPLE = ITEMS.register("fusion_apple", () -> new Item(new Item.Properties().food(AdvancedValuables_FoodProperties.FUSION_APPLE)));
+    public static final RegistryObject<Item> RUBY_APPLE = ITEMS.register("ruby_apple", () -> new Item(new Item.Properties().food(AdvancedValuables_FoodProperties.RUBY_APPLE)));
+
     private static RegistryObject<Item> registerPickaxeItem(String name, Tier tier)
     {
         return ITEMS.register(name, () -> new PickaxeItem(tier, new Item.Properties().attributes(PickaxeItem.createAttributes(tier, 1, -2.8f))));
@@ -306,7 +321,7 @@ public class AdvancedValuables_ItemClass
         return ITEMS.register(name, () -> new SwordItem(tier, new Item.Properties().attributes(SwordItem.createAttributes(tier, 3, -2.4f)).fireResistant()));
     }
 
-    private static RegistryObject<Item> registerItem(String name)
+    private static RegistryObject<Item> registerSimpleItem(String name)
     {
         return ITEMS.register(name, () -> new Item(new Item.Properties()));
     }

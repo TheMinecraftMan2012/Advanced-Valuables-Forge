@@ -199,6 +199,25 @@ public class AdvancedValuables_CreativeModeTabs
             })
             .build());
 
+    public static final RegistryObject<CreativeModeTab> AV_FOODS_TAB = AV_REGISTER_CMT.register("foods", () -> CreativeModeTab.builder()
+            .withTabsBefore(ResourceLocation.fromNamespaceAndPath(AdvancedValuables.MOD_ID, "tools_armor"))
+            .icon(() -> new ItemStack(AdvancedValuables_ItemClass.FUSION_APPLE.get()))
+            .title(Component.translatable("creativetab.advancedvaluables.foods"))
+            .displayItems((params, output) -> {
+                output.accept(AdvancedValuables_ItemClass.RED_SAPPHIRE_APPLE.get());
+                output.accept(AdvancedValuables_ItemClass.BLUE_SAPPHIRE_APPLE.get());
+                output.accept(AdvancedValuables_ItemClass.GREEN_SAPPHIRE_APPLE.get());
+
+                output.accept(AdvancedValuables_ItemClass.RED_GARNET_APPLE.get());
+                output.accept(AdvancedValuables_ItemClass.BLUE_GARNET_APPLE.get());
+                output.accept(AdvancedValuables_ItemClass.PINK_GARNET_APPLE.get());
+                output.accept(AdvancedValuables_ItemClass.YELLOW_GARNET_APPLE.get());
+
+                output.accept(AdvancedValuables_ItemClass.FUSION_APPLE.get());
+                output.accept(AdvancedValuables_ItemClass.RUBY_APPLE.get());
+            })
+            .build());
+
     public static void register(IEventBus eventBus)
     {
         AV_REGISTER_CMT.register(eventBus);

@@ -1,29 +1,29 @@
-[23Sep2024 18:16:18.320] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 17, --assetsDir, C:\Users\romel\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, advancedvaluables, --all, --output, I:\Minecraft Related\Mod Projects\Projects\Advanced Valuables\Advanced-Valuables-Forge\src\generated\resources, --existing, I:\Minecraft Related\Mod Projects\Projects\Advanced Valuables\Advanced-Valuables-Forge\src\main\resources]
-[23Sep2024 18:16:18.324] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.4+7-LTS
-[23Sep2024 18:16:18.325] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.1 starting: java version 21.0.4 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
-[23Sep2024 18:16:18.443] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
-[23Sep2024 18:16:18.535] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/romel/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
-[23Sep2024 18:16:19.508] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[23Sep2024 18:16:20.181] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\romel\.gradle\caches\forge_gradle\assets, --assetIndex, 17, --mod, advancedvaluables, --all, --output, I:\Minecraft Related\Mod Projects\Projects\Advanced Valuables\Advanced-Valuables-Forge\src\generated\resources, --existing, I:\Minecraft Related\Mod Projects\Projects\Advanced Valuables\Advanced-Valuables-Forge\src\main\resources]
-[23Sep2024 18:16:24.747] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 51.0.33, for MC 1.21 with MCP 20240613.102039
-[23Sep2024 18:16:24.747] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v51.0.33 Initialized
-[23Sep2024 18:16:24.766] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
-[23Sep2024 18:16:25.301] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [advancedvaluables]
-[23Sep2024 18:16:25.359] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/romel/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.07.28-1.21/forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/assets/.mcassetsroot' uses unexpected schema
-[23Sep2024 18:16:25.360] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/romel/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.07.28-1.21/forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/data/.mcassetsroot' uses unexpected schema
-[23Sep2024 18:16:25.529] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id advancedvaluables
-[23Sep2024 18:16:25.701] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id advancedvaluables finished after 171 ms
-[23Sep2024 18:16:25.701] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id advancedvaluables
-[23Sep2024 18:16:25.706] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id advancedvaluables finished after 4 ms
-[23Sep2024 18:16:25.707] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[23Sep2024 18:16:25.748] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 41 ms
-[23Sep2024 18:16:25.748] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
-[23Sep2024 18:16:25.837] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 88 ms
-[23Sep2024 18:16:25.837] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[23Sep2024 18:16:26.004] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 167 ms
-[23Sep2024 18:16:26.005] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: advancedvaluables
-[23Sep2024 18:16:26.045] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: advancedvaluables finished after 40 ms
-[23Sep2024 18:16:26.046] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: advancedvaluables
-[23Sep2024 18:16:26.176] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: advancedvaluables finished after 129 ms
-[23Sep2024 18:16:26.176] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 647 ms
-[23Sep2024 18:16:26.194] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 672, old count: 0, new count: 673, removed stale: 0, written: 672
+[27Sep2024 09:59:17.083] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 17, --assetsDir, C:\Users\romel\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, advancedvaluables, --all, --output, I:\Minecraft Related\Mod Projects\Projects\Advanced Valuables\Advanced-Valuables-Forge\src\generated\resources, --existing, I:\Minecraft Related\Mod Projects\Projects\Advanced Valuables\Advanced-Valuables-Forge\src\main\resources]
+[27Sep2024 09:59:17.085] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.4+7-LTS
+[27Sep2024 09:59:17.086] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.1 starting: java version 21.0.4 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[27Sep2024 09:59:17.198] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
+[27Sep2024 09:59:17.293] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/romel/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
+[27Sep2024 09:59:18.242] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[27Sep2024 09:59:18.941] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\romel\.gradle\caches\forge_gradle\assets, --assetIndex, 17, --mod, advancedvaluables, --all, --output, I:\Minecraft Related\Mod Projects\Projects\Advanced Valuables\Advanced-Valuables-Forge\src\generated\resources, --existing, I:\Minecraft Related\Mod Projects\Projects\Advanced Valuables\Advanced-Valuables-Forge\src\main\resources]
+[27Sep2024 09:59:23.643] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 51.0.33, for MC 1.21 with MCP 20240613.102039
+[27Sep2024 09:59:23.644] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v51.0.33 Initialized
+[27Sep2024 09:59:23.662] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
+[27Sep2024 09:59:24.245] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [advancedvaluables]
+[27Sep2024 09:59:24.296] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/romel/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.07.28-1.21/forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/assets/.mcassetsroot' uses unexpected schema
+[27Sep2024 09:59:24.296] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/romel/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.07.28-1.21/forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/data/.mcassetsroot' uses unexpected schema
+[27Sep2024 09:59:24.464] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id advancedvaluables
+[27Sep2024 09:59:24.599] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id advancedvaluables finished after 125 ms
+[27Sep2024 09:59:24.599] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id advancedvaluables
+[27Sep2024 09:59:24.601] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id advancedvaluables finished after 1 ms
+[27Sep2024 09:59:24.601] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[27Sep2024 09:59:24.643] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 41 ms
+[27Sep2024 09:59:24.643] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[27Sep2024 09:59:24.744] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 100 ms
+[27Sep2024 09:59:24.744] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[27Sep2024 09:59:24.890] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 145 ms
+[27Sep2024 09:59:24.891] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: advancedvaluables
+[27Sep2024 09:59:24.939] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: advancedvaluables finished after 47 ms
+[27Sep2024 09:59:24.939] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: advancedvaluables
+[27Sep2024 09:59:25.084] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: advancedvaluables finished after 145 ms
+[27Sep2024 09:59:25.084] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 620 ms
+[27Sep2024 09:59:25.102] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 699, old count: 681, new count: 700, removed stale: 0, written: 18

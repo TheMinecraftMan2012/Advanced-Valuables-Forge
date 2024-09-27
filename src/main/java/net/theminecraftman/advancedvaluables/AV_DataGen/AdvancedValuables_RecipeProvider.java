@@ -227,6 +227,19 @@ public class AdvancedValuables_RecipeProvider extends RecipeProvider implements 
                 AdvancedValuables_ItemClass.RUBY_LEGGINGS,
                 AdvancedValuables_ItemClass.RUBY_BOOTS, AdvancedValuables_ItemClass.RUBY, "has_ruby");
 
+        // -- Crafting Recipe -- // -- Shaped Recipe -- // -- Apple Recipe -- //
+        generateAppleRecipe(recipeOutput, AdvancedValuables_ItemClass.RED_SAPPHIRE_APPLE, AdvancedValuables_ItemClass.RED_SAPPHIRE, "red_sapphire");
+        generateAppleRecipe(recipeOutput, AdvancedValuables_ItemClass.BLUE_SAPPHIRE_APPLE, AdvancedValuables_ItemClass.BLUE_SAPPHIRE, "blue_sapphire");
+        generateAppleRecipe(recipeOutput, AdvancedValuables_ItemClass.GREEN_SAPPHIRE_APPLE, AdvancedValuables_ItemClass.GREEN_SAPPHIRE, "green_sapphire");
+
+        generateAppleRecipe(recipeOutput, AdvancedValuables_ItemClass.RED_GARNET_APPLE, AdvancedValuables_ItemClass.RED_GARNET, "red_garnet");
+        generateAppleRecipe(recipeOutput, AdvancedValuables_ItemClass.BLUE_GARNET_APPLE, AdvancedValuables_ItemClass.BLUE_GARNET, "blue_garnet");
+        generateAppleRecipe(recipeOutput, AdvancedValuables_ItemClass.PINK_GARNET_APPLE, AdvancedValuables_ItemClass.PINK_GARNET, "pink_garnet");
+        generateAppleRecipe(recipeOutput, AdvancedValuables_ItemClass.YELLOW_GARNET_APPLE, AdvancedValuables_ItemClass.YELLOW_GARNET, "yellow_garnet");
+
+        generateAppleRecipe(recipeOutput, AdvancedValuables_ItemClass.FUSION_APPLE, AdvancedValuables_ItemClass.FUSION_GEM, "fusion_gem");
+        generateAppleRecipe(recipeOutput, AdvancedValuables_ItemClass.RUBY_APPLE, AdvancedValuables_ItemClass.RUBY, "ruby");
+
         // -- Crafting Recipe -- // -- Shapeless Recipe -- //
         // -- Red Sapphire -- //
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, AdvancedValuables_ItemClass.RED_SAPPHIRE.get(), 9)
@@ -479,5 +492,15 @@ public class AdvancedValuables_RecipeProvider extends RecipeProvider implements 
                 .pattern("a a")
                 .define('a', ingredient.get())
                 .unlockedBy(group, has(ingredient.get())).save(output);
+    }
+
+    private static void generateAppleRecipe(RecipeOutput output, RegistryObject<Item> result, RegistryObject<Item> ingredients, String group)
+    {
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, result.get())
+                .pattern("aaa")
+                .pattern("aba")
+                .pattern("aaa")
+                .define('a', ingredients.get()).define('b', Items.APPLE)
+                .unlockedBy(group, has(ingredients.get())).save(output);
     }
 }
