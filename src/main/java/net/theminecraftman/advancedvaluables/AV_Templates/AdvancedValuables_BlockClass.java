@@ -3,10 +3,10 @@ package net.theminecraftman.advancedvaluables.AV_Templates;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -72,6 +72,260 @@ public class AdvancedValuables_BlockClass
     public static final RegistryObject<Block> DEEPSLATE_FUSION_ORE = registerDeepSlateOreBlock("fusion_deepslate_ore", 6, 12);
 
     public static final RegistryObject<Block> DEEPSLATE_RUBY_ORE = registerDeepSlateOreBlock("ruby_deepslate_ore", 2, 7);
+
+    // -- Decor Blocks -- //
+    // -- Red Sapphire -- //
+    public static final RegistryObject<StairBlock> RED_SAPPHIRE_STAIRS = registerBlock("red_sapphire_stairs",
+            () -> new StairBlock(RED_SAPPHIRE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<SlabBlock> RED_SAPPHIRE_SLAB = registerBlock("red_sapphire_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<PressurePlateBlock> RED_SAPPHIRE_PRESSURE_PLATE = registerBlock("red_sapphire_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<ButtonBlock> RED_SAPPHIRE_BUTTON = registerBlock("red_sapphire_button",
+            () -> new ButtonBlock(BlockSetType.IRON, 10, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noCollission()));
+
+    public static final RegistryObject<FenceBlock> RED_SAPPHIRE_FENCE = registerBlock("red_sapphire_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<FenceGateBlock> RED_SAPPHIRE_FENCE_GATE = registerBlock("red_sapphire_fence_gate",
+            () -> new FenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<WallBlock> RED_SAPPHIRE_WALL = registerBlock("red_sapphire_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<DoorBlock> RED_SAPPHIRE_DOOR = registerBlock("red_sapphire_door",
+            () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noOcclusion()));
+
+    public static final RegistryObject<TrapDoorBlock> RED_SAPPHIRE_TRAPDOOR = registerBlock("red_sapphire_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noOcclusion()));
+
+    // -- Blue Sapphire -- //
+    public static final RegistryObject<StairBlock> BLUE_SAPPHIRE_STAIRS = registerBlock("blue_sapphire_stairs",
+            () -> new StairBlock(BLUE_SAPPHIRE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<SlabBlock> BLUE_SAPPHIRE_SLAB = registerBlock("blue_sapphire_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<PressurePlateBlock> BLUE_SAPPHIRE_PRESSURE_PLATE = registerBlock("blue_sapphire_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<ButtonBlock> BLUE_SAPPHIRE_BUTTON = registerBlock("blue_sapphire_button",
+            () -> new ButtonBlock(BlockSetType.IRON, 10, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noCollission()));
+
+    public static final RegistryObject<FenceBlock> BLUE_SAPPHIRE_FENCE = registerBlock("blue_sapphire_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<FenceGateBlock> BLUE_SAPPHIRE_FENCE_GATE = registerBlock("blue_sapphire_fence_gate",
+            () -> new FenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<WallBlock> BLUE_SAPPHIRE_WALL = registerBlock("blue_sapphire_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<DoorBlock> BLUE_SAPPHIRE_DOOR = registerBlock("blue_sapphire_door",
+            () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noOcclusion()));
+
+    public static final RegistryObject<TrapDoorBlock> BLUE_SAPPHIRE_TRAPDOOR = registerBlock("blue_sapphire_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noOcclusion()));
+
+    // -- Green Sapphire -- //
+    public static final RegistryObject<StairBlock> GREEN_SAPPHIRE_STAIRS = registerBlock("green_sapphire_stairs",
+            () -> new StairBlock(GREEN_SAPPHIRE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<SlabBlock> GREEN_SAPPHIRE_SLAB = registerBlock("green_sapphire_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<PressurePlateBlock> GREEN_SAPPHIRE_PRESSURE_PLATE = registerBlock("green_sapphire_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<ButtonBlock> GREEN_SAPPHIRE_BUTTON = registerBlock("green_sapphire_button",
+            () -> new ButtonBlock(BlockSetType.IRON, 10, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noCollission()));
+
+    public static final RegistryObject<FenceBlock> GREEN_SAPPHIRE_FENCE = registerBlock("green_sapphire_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<FenceGateBlock> GREEN_SAPPHIRE_FENCE_GATE = registerBlock("green_sapphire_fence_gate",
+            () -> new FenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+    
+    public static final RegistryObject<WallBlock> GREEN_SAPPHIRE_WALL = registerBlock("green_sapphire_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<DoorBlock> GREEN_SAPPHIRE_DOOR = registerBlock("green_sapphire_door",
+            () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noOcclusion()));
+
+    public static final RegistryObject<TrapDoorBlock> GREEN_SAPPHIRE_TRAPDOOR = registerBlock("green_sapphire_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noOcclusion()));
+
+    // -- Red Garnet -- //
+    public static final RegistryObject<StairBlock> RED_GARNET_STAIRS = registerBlock("red_garnet_stairs",
+            () -> new StairBlock(RED_GARNET_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<SlabBlock> RED_GARNET_SLAB = registerBlock("red_garnet_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<PressurePlateBlock> RED_GARNET_PRESSURE_PLATE = registerBlock("red_garnet_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<ButtonBlock> RED_GARNET_BUTTON = registerBlock("red_garnet_button",
+            () -> new ButtonBlock(BlockSetType.IRON, 10, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noCollission()));
+
+    public static final RegistryObject<FenceBlock> RED_GARNET_FENCE = registerBlock("red_garnet_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<FenceGateBlock> RED_GARNET_FENCE_GATE = registerBlock("red_garnet_fence_gate",
+            () -> new FenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<WallBlock> RED_GARNET_WALL = registerBlock("red_garnet_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<DoorBlock> RED_GARNET_DOOR = registerBlock("red_garnet_door",
+            () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noOcclusion()));
+
+    public static final RegistryObject<TrapDoorBlock> RED_GARNET_TRAPDOOR = registerBlock("red_garnet_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noOcclusion()));
+
+    // -- Blue Garnet -- //
+    public static final RegistryObject<StairBlock> BLUE_GARNET_STAIRS = registerBlock("blue_garnet_stairs",
+            () -> new StairBlock(BLUE_GARNET_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<SlabBlock> BLUE_GARNET_SLAB = registerBlock("blue_garnet_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<PressurePlateBlock> BLUE_GARNET_PRESSURE_PLATE = registerBlock("blue_garnet_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<ButtonBlock> BLUE_GARNET_BUTTON = registerBlock("blue_garnet_button",
+            () -> new ButtonBlock(BlockSetType.IRON, 10, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noCollission()));
+
+    public static final RegistryObject<FenceBlock> BLUE_GARNET_FENCE = registerBlock("blue_garnet_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<FenceGateBlock> BLUE_GARNET_FENCE_GATE = registerBlock("blue_garnet_fence_gate",
+            () -> new FenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<WallBlock> BLUE_GARNET_WALL = registerBlock("blue_garnet_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<DoorBlock> BLUE_GARNET_DOOR = registerBlock("blue_garnet_door",
+            () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noOcclusion()));
+
+    public static final RegistryObject<TrapDoorBlock> BLUE_GARNET_TRAPDOOR = registerBlock("blue_garnet_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noOcclusion()));
+
+    // -- Pink Garnet -- //
+    public static final RegistryObject<StairBlock> PINK_GARNET_STAIRS = registerBlock("pink_garnet_stairs",
+            () -> new StairBlock(PINK_GARNET_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<SlabBlock> PINK_GARNET_SLAB = registerBlock("pink_garnet_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<PressurePlateBlock> PINK_GARNET_PRESSURE_PLATE = registerBlock("pink_garnet_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<ButtonBlock> PINK_GARNET_BUTTON = registerBlock("pink_garnet_button",
+            () -> new ButtonBlock(BlockSetType.IRON, 10, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noCollission()));
+
+    public static final RegistryObject<FenceBlock> PINK_GARNET_FENCE = registerBlock("pink_garnet_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<FenceGateBlock> PINK_GARNET_FENCE_GATE = registerBlock("pink_garnet_fence_gate",
+            () -> new FenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<WallBlock> PINK_GARNET_WALL = registerBlock("pink_garnet_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<DoorBlock> PINK_GARNET_DOOR = registerBlock("pink_garnet_door",
+            () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noOcclusion()));
+
+    public static final RegistryObject<TrapDoorBlock> PINK_GARNET_TRAPDOOR = registerBlock("pink_garnet_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noOcclusion()));
+
+    // -- Yellow Garnet -- //
+    public static final RegistryObject<StairBlock> YELLOW_GARNET_STAIRS = registerBlock("yellow_garnet_stairs",
+            () -> new StairBlock(YELLOW_GARNET_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<SlabBlock> YELLOW_GARNET_SLAB = registerBlock("yellow_garnet_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<PressurePlateBlock> YELLOW_GARNET_PRESSURE_PLATE = registerBlock("yellow_garnet_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<ButtonBlock> YELLOW_GARNET_BUTTON = registerBlock("yellow_garnet_button",
+            () -> new ButtonBlock(BlockSetType.IRON, 10, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noCollission()));
+
+    public static final RegistryObject<FenceBlock> YELLOW_GARNET_FENCE = registerBlock("yellow_garnet_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<FenceGateBlock> YELLOW_GARNET_FENCE_GATE = registerBlock("yellow_garnet_fence_gate",
+            () -> new FenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<WallBlock> YELLOW_GARNET_WALL = registerBlock("yellow_garnet_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<DoorBlock> YELLOW_GARNET_DOOR = registerBlock("yellow_garnet_door",
+            () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noOcclusion()));
+
+    public static final RegistryObject<TrapDoorBlock> YELLOW_GARNET_TRAPDOOR = registerBlock("yellow_garnet_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noOcclusion()));
+
+    // -- Fusion Gem -- //
+    public static final RegistryObject<StairBlock> FUSION_STAIRS = registerBlock("fusion_stairs",
+            () -> new StairBlock(FUSION_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<SlabBlock> FUSION_SLAB = registerBlock("fusion_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<PressurePlateBlock> FUSION_PRESSURE_PLATE = registerBlock("fusion_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<ButtonBlock> FUSION_BUTTON = registerBlock("fusion_button",
+            () -> new ButtonBlock(BlockSetType.IRON, 10, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noCollission()));
+
+    public static final RegistryObject<FenceBlock> FUSION_FENCE = registerBlock("fusion_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<FenceGateBlock> FUSION_FENCE_GATE = registerBlock("fusion_fence_gate",
+            () -> new FenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<WallBlock> FUSION_WALL = registerBlock("fusion_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<DoorBlock> FUSION_DOOR = registerBlock("fusion_door",
+            () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noOcclusion()));
+
+    public static final RegistryObject<TrapDoorBlock> FUSION_TRAPDOOR = registerBlock("fusion_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noOcclusion()));
+
+    // -- Ruby -- //
+    public static final RegistryObject<StairBlock> RUBY_STAIRS = registerBlock("ruby_stairs",
+            () -> new StairBlock(RUBY_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<SlabBlock> RUBY_SLAB = registerBlock("ruby_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<PressurePlateBlock> RUBY_PRESSURE_PLATE = registerBlock("ruby_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<ButtonBlock> RUBY_BUTTON = registerBlock("ruby_button",
+            () -> new ButtonBlock(BlockSetType.IRON, 10, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noCollission()));
+
+    public static final RegistryObject<FenceBlock> RUBY_FENCE = registerBlock("ruby_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<FenceGateBlock> RUBY_FENCE_GATE = registerBlock("ruby_fence_gate",
+            () -> new FenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<WallBlock> RUBY_WALL = registerBlock("ruby_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<DoorBlock> RUBY_DOOR = registerBlock("ruby_door",
+            () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noOcclusion()));
+
+    public static final RegistryObject<TrapDoorBlock> RUBY_TRAPDOOR = registerBlock("ruby_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noOcclusion()));
+
 
     private static RegistryObject<Block> registerStoneOreBlock(String name, int minValue, int maxValue)
     {

@@ -2,11 +2,16 @@ package net.theminecraftman.advancedvaluables.AV_DataGen;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.FenceBlock;
+import net.minecraft.world.level.block.WallBlock;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.theminecraftman.advancedvaluables.AV_Templates.AdvancedValuables_BlockClass;
 import net.theminecraftman.advancedvaluables.AV_Templates.AdvancedValuables_ItemClass;
 import net.theminecraftman.advancedvaluables.AdvancedValuables;
 
@@ -152,11 +157,80 @@ public class AdvancedValuables_ItemModelProvider extends ItemModelProvider
         basicItem(AdvancedValuables_ItemClass.YELLOW_GARNET_APPLE.get());
         basicItem(AdvancedValuables_ItemClass.FUSION_APPLE.get());
         basicItem(AdvancedValuables_ItemClass.RUBY_APPLE.get());
+
+        buttonItem(AdvancedValuables_BlockClass.RED_SAPPHIRE_BUTTON, AdvancedValuables_BlockClass.RED_SAPPHIRE_BLOCK);
+        buttonItem(AdvancedValuables_BlockClass.BLUE_SAPPHIRE_BUTTON, AdvancedValuables_BlockClass.BLUE_SAPPHIRE_BLOCK);
+        buttonItem(AdvancedValuables_BlockClass.GREEN_SAPPHIRE_BUTTON, AdvancedValuables_BlockClass.GREEN_SAPPHIRE_BLOCK);
+        buttonItem(AdvancedValuables_BlockClass.RED_GARNET_BUTTON, AdvancedValuables_BlockClass.RED_GARNET_BLOCK);
+        buttonItem(AdvancedValuables_BlockClass.BLUE_GARNET_BUTTON, AdvancedValuables_BlockClass.BLUE_GARNET_BLOCK);
+        buttonItem(AdvancedValuables_BlockClass.PINK_GARNET_BUTTON, AdvancedValuables_BlockClass.PINK_GARNET_BLOCK);
+        buttonItem(AdvancedValuables_BlockClass.YELLOW_GARNET_BUTTON, AdvancedValuables_BlockClass.YELLOW_GARNET_BLOCK);
+        buttonItem(AdvancedValuables_BlockClass.FUSION_BUTTON, AdvancedValuables_BlockClass.FUSION_BLOCK);
+        buttonItem(AdvancedValuables_BlockClass.RUBY_BUTTON, AdvancedValuables_BlockClass.RUBY_BLOCK);
+
+        fenceItem(AdvancedValuables_BlockClass.RED_SAPPHIRE_FENCE, AdvancedValuables_BlockClass.RED_SAPPHIRE_BLOCK);
+        fenceItem(AdvancedValuables_BlockClass.BLUE_SAPPHIRE_FENCE, AdvancedValuables_BlockClass.BLUE_SAPPHIRE_BLOCK);
+        fenceItem(AdvancedValuables_BlockClass.GREEN_SAPPHIRE_FENCE, AdvancedValuables_BlockClass.GREEN_SAPPHIRE_BLOCK);
+        fenceItem(AdvancedValuables_BlockClass.RED_GARNET_FENCE, AdvancedValuables_BlockClass.RED_GARNET_BLOCK);
+        fenceItem(AdvancedValuables_BlockClass.BLUE_GARNET_FENCE, AdvancedValuables_BlockClass.BLUE_GARNET_BLOCK);
+        fenceItem(AdvancedValuables_BlockClass.PINK_GARNET_FENCE, AdvancedValuables_BlockClass.PINK_GARNET_BLOCK);
+        fenceItem(AdvancedValuables_BlockClass.YELLOW_GARNET_FENCE, AdvancedValuables_BlockClass.YELLOW_GARNET_BLOCK);
+        fenceItem(AdvancedValuables_BlockClass.FUSION_FENCE, AdvancedValuables_BlockClass.FUSION_BLOCK);
+        fenceItem(AdvancedValuables_BlockClass.RUBY_FENCE, AdvancedValuables_BlockClass.RUBY_BLOCK);
+
+        wallItem(AdvancedValuables_BlockClass.RED_SAPPHIRE_WALL, AdvancedValuables_BlockClass.RED_SAPPHIRE_BLOCK);
+        wallItem(AdvancedValuables_BlockClass.BLUE_SAPPHIRE_WALL, AdvancedValuables_BlockClass.BLUE_SAPPHIRE_BLOCK);
+        wallItem(AdvancedValuables_BlockClass.GREEN_SAPPHIRE_WALL, AdvancedValuables_BlockClass.GREEN_SAPPHIRE_BLOCK);
+        wallItem(AdvancedValuables_BlockClass.RED_GARNET_WALL, AdvancedValuables_BlockClass.RED_GARNET_BLOCK);
+        wallItem(AdvancedValuables_BlockClass.BLUE_GARNET_WALL, AdvancedValuables_BlockClass.BLUE_GARNET_BLOCK);
+        wallItem(AdvancedValuables_BlockClass.PINK_GARNET_WALL, AdvancedValuables_BlockClass.PINK_GARNET_BLOCK);
+        wallItem(AdvancedValuables_BlockClass.YELLOW_GARNET_WALL, AdvancedValuables_BlockClass.YELLOW_GARNET_BLOCK);
+        wallItem(AdvancedValuables_BlockClass.FUSION_WALL, AdvancedValuables_BlockClass.FUSION_BLOCK);
+        wallItem(AdvancedValuables_BlockClass.RUBY_WALL, AdvancedValuables_BlockClass.RUBY_BLOCK);
+
+        simpleBlockItem(AdvancedValuables_BlockClass.RED_SAPPHIRE_DOOR);
+        simpleBlockItem(AdvancedValuables_BlockClass.BLUE_SAPPHIRE_DOOR);
+        simpleBlockItem(AdvancedValuables_BlockClass.GREEN_SAPPHIRE_DOOR);
+        simpleBlockItem(AdvancedValuables_BlockClass.RED_GARNET_DOOR);
+        simpleBlockItem(AdvancedValuables_BlockClass.BLUE_GARNET_DOOR);
+        simpleBlockItem(AdvancedValuables_BlockClass.PINK_GARNET_DOOR);
+        simpleBlockItem(AdvancedValuables_BlockClass.YELLOW_GARNET_DOOR);
+        simpleBlockItem(AdvancedValuables_BlockClass.FUSION_DOOR);
+        simpleBlockItem(AdvancedValuables_BlockClass.RUBY_DOOR);
     }
 
-    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
+    private ItemModelBuilder handheldItem(RegistryObject<?> item) 
+    {
         return withExistingParent(item.getId().getPath(),
                 ResourceLocation.parse("item/handheld")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(AdvancedValuables.MOD_ID,"item/" + item.getId().getPath()));
+    }
+
+    public void buttonItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock)
+    {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
+                .texture("texture",  ResourceLocation.fromNamespaceAndPath(AdvancedValuables.MOD_ID,
+                        "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    public void fenceItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock)
+    {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture",  ResourceLocation.fromNamespaceAndPath(AdvancedValuables.MOD_ID,
+                        "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    public void wallItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock)
+    {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
+                .texture("wall",  ResourceLocation.fromNamespaceAndPath(AdvancedValuables.MOD_ID,
+                        "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    private ItemModelBuilder simpleBlockItem(RegistryObject<? extends Block> item)
+    {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture("layer0",
                 ResourceLocation.fromNamespaceAndPath(AdvancedValuables.MOD_ID,"item/" + item.getId().getPath()));
     }
 }
