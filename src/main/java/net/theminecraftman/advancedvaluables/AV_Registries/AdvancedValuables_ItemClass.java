@@ -1,13 +1,14 @@
-package net.theminecraftman.advancedvaluables.AV_Templates;
+package net.theminecraftman.advancedvaluables.AV_Registries;
 
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.theminecraftman.advancedvaluables.AV_Templates.FoodComponents.AdvancedValuables_FoodProperties;
-import net.theminecraftman.advancedvaluables.AV_ToolComponents.AdvancedValuables_ArmorMaterials;
-import net.theminecraftman.advancedvaluables.AV_ToolComponents.AdvancedValuables_ToolsTier;
+import net.theminecraftman.advancedvaluables.AV_Libraries.FoodComponents.AdvancedValuables_FoodProperties;
+import net.theminecraftman.advancedvaluables.AV_Libraries.AV_ToolComponents.AdvancedValuables_ArmorMaterials;
+import net.theminecraftman.advancedvaluables.AV_Libraries.AV_ToolComponents.AdvancedValuables_ToolsTier;
+import net.theminecraftman.advancedvaluables.AV_Libraries.Hammer.HammerItem;
 import net.theminecraftman.advancedvaluables.AdvancedValuables;
 
 import java.util.function.Supplier;
@@ -25,7 +26,7 @@ public class AdvancedValuables_ItemClass
     public static final RegistryObject<Item> PINK_GARNET = registerSimpleItem("pink_garnet");
     public static final RegistryObject<Item> YELLOW_GARNET = registerSimpleItem("yellow_garnet");
 
-    public static final RegistryObject<Item> FUSION_GEM = registerFireResistantItem("fusion_gem");
+    public static final RegistryObject<Item> FUSION_GEM = registerSimpleItem("fusion_gem", () -> new Item(new Item.Properties().fireResistant()));
 
     public static final RegistryObject<Item> RUBY = registerSimpleItem("ruby");
 
@@ -38,7 +39,7 @@ public class AdvancedValuables_ItemClass
     public static final RegistryObject<Item> PINK_RAW_GARNET = registerSimpleItem("pink_raw_garnet");
     public static final RegistryObject<Item> YELLOW_RAW_GARNET = registerSimpleItem("yellow_raw_garnet");
 
-    public static final RegistryObject<Item> RAW_FUSION_GEM = registerFireResistantItem("raw_fusion_gem");
+    public static final RegistryObject<Item> RAW_FUSION_GEM = registerSimpleItem("raw_fusion_gem", () -> new Item(new Item.Properties().fireResistant()));
 
     public static final RegistryObject<Item> RAW_RUBY = registerSimpleItem("raw_ruby");
 
@@ -271,6 +272,24 @@ public class AdvancedValuables_ItemClass
     public static final RegistryObject<Item> FUSION_APPLE = ITEMS.register("fusion_apple", () -> new Item(new Item.Properties().food(AdvancedValuables_FoodProperties.FUSION_APPLE)));
     public static final RegistryObject<Item> RUBY_APPLE = ITEMS.register("ruby_apple", () -> new Item(new Item.Properties().food(AdvancedValuables_FoodProperties.RUBY_APPLE)));
 
+    // -- Hammer Requirements -- //
+    public static final RegistryObject<Item> HAMMER_WIREFRAME = registerSimpleItem("hammer_wireframe");
+
+    // -- Hammers -- //
+    public static final RegistryObject<HammerItem> RED_SAPPHIRE_HAMMER = registerHammerItem("red_sapphire_hammer", AdvancedValuables_ToolsTier.RED_SAPPHIRE_TOOL_TIER);
+    public static final RegistryObject<HammerItem> BLUE_SAPPHIRE_HAMMER = registerHammerItem("blue_sapphire_hammer", AdvancedValuables_ToolsTier.BLUE_SAPPHIRE_TOOL_TIER);
+    public static final RegistryObject<HammerItem> GREEN_SAPPHIRE_HAMMER = registerHammerItem("green_sapphire_hammer", AdvancedValuables_ToolsTier.GREEN_SAPPHIRE_TOOL_TIER);
+
+    public static final RegistryObject<HammerItem> RED_GARNET_HAMMER = registerHammerItem("red_garnet_hammer", AdvancedValuables_ToolsTier.RED_GARNET_TOOL_TIER);
+    public static final RegistryObject<HammerItem> BLUE_GARNET_HAMMER = registerHammerItem("blue_garnet_hammer", AdvancedValuables_ToolsTier.BLUE_GARNET_TOOL_TIER);
+    public static final RegistryObject<HammerItem> PINK_GARNET_HAMMER = registerHammerItem("pink_garnet_hammer", AdvancedValuables_ToolsTier.PINK_GARNET_TOOL_TIER);
+    public static final RegistryObject<HammerItem> YELLOW_GARNET_HAMMER = registerHammerItem("yellow_garnet_hammer", AdvancedValuables_ToolsTier.YELLOW_GARNET_TOOL_TIER);
+
+    public static final RegistryObject<HammerItem> FUSION_HAMMER = registerHammerItem("fusion_hammer", AdvancedValuables_ToolsTier.FUSION_TOOL_TIER);
+    public static final RegistryObject<HammerItem> RUBY_HAMMER = registerHammerItem("ruby_hammer", AdvancedValuables_ToolsTier.RUBY_TOOL_TIER);
+    
+    // -- Functions -- //
+    
     private static RegistryObject<PickaxeItem> registerPickaxeItem(String name, Tier tier)
     {
         return ITEMS.register(name, () -> new PickaxeItem(tier, new Item.Properties().attributes(PickaxeItem.createAttributes(tier, 1, -2.8f))));
@@ -326,9 +345,14 @@ public class AdvancedValuables_ItemClass
         return ITEMS.register(name, () -> new Item(new Item.Properties()));
     }
 
-    private static RegistryObject<Item> registerFireResistantItem(String name)
+    private static RegistryObject<Item> registerSimpleItem(String name, Supplier<Item> properties)
     {
-        return ITEMS.register(name, () -> new Item(new Item.Properties().fireResistant()));
+        return ITEMS.register(name, properties);
+    }
+
+    private static RegistryObject<HammerItem> registerHammerItem(String name, Tier tier)
+    {
+        return ITEMS.register(name, () -> new HammerItem(tier, new Item.Properties().attributes(HammerItem.createAttributes(tier, 7, -3.5f))));
     }
 
     public static void register(IEventBus eventBus)
