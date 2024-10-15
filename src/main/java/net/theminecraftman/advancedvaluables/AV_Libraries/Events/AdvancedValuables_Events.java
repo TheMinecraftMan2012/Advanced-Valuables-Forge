@@ -16,6 +16,8 @@ import java.util.Set;
 @Mod.EventBusSubscriber(modid = AdvancedValuables.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class AdvancedValuables_Events
 {
+    // -- Help taken from Kaupenjoe. See https://youtu.be/-EuJTKoLzlM?si=wl433_BoUGwaIJzc -- //
+
     private static final Set<BlockPos> HARVESTED_BLOCKS = new HashSet<>();
 
     @SubscribeEvent

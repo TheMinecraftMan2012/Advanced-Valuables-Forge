@@ -14,6 +14,8 @@ import java.util.List;
 
 public class HammerItem extends DiggerItem
 {
+    // -- Help taken from Kaupenjoe. See https://youtu.be/-EuJTKoLzlM?si=wl433_BoUGwaIJzc -- //
+
     public HammerItem(Tier tier, Properties properties)
     {
         super(tier, BlockTags.MINEABLE_WITH_PICKAXE, properties);
