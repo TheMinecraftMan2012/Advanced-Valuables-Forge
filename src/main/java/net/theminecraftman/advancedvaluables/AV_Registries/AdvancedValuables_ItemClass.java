@@ -229,19 +229,19 @@ public class AdvancedValuables_ItemClass
 
     public static final RegistryObject<ArmorItem> FUSION_HELMET = ITEMS.register("fusion_helmet",
             () -> new ArmorItem(AdvancedValuables_ArmorMaterials.FUSION_GEM, ArmorItem.Type.HELMET,
-                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(50))));
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(50)).fireResistant()));
 
     public static final RegistryObject<ArmorItem> FUSION_CHESTPLATE = ITEMS.register("fusion_chestplate",
             () -> new ArmorItem(AdvancedValuables_ArmorMaterials.FUSION_GEM, ArmorItem.Type.CHESTPLATE,
-                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(50))));
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(50)).fireResistant()));
 
     public static final RegistryObject<ArmorItem> FUSION_LEGGINGS = ITEMS.register("fusion_leggings",
             () -> new ArmorItem(AdvancedValuables_ArmorMaterials.FUSION_GEM, ArmorItem.Type.LEGGINGS,
-                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(50))));
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(50)).fireResistant()));
 
     public static final RegistryObject<ArmorItem> FUSION_BOOTS = ITEMS.register("fusion_boots",
             () -> new ArmorItem(AdvancedValuables_ArmorMaterials.FUSION_GEM, ArmorItem.Type.BOOTS,
-                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(50))));
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(50)).fireResistant()));
 
     public static final RegistryObject<ArmorItem> RUBY_HELMET = ITEMS.register("ruby_helmet",
             () -> new ArmorItem(AdvancedValuables_ArmorMaterials.RUBY, ArmorItem.Type.HELMET,
@@ -285,7 +285,7 @@ public class AdvancedValuables_ItemClass
     public static final RegistryObject<HammerItem> PINK_GARNET_HAMMER = registerHammerItem("pink_garnet_hammer", AdvancedValuables_ToolsTier.PINK_GARNET_TOOL_TIER);
     public static final RegistryObject<HammerItem> YELLOW_GARNET_HAMMER = registerHammerItem("yellow_garnet_hammer", AdvancedValuables_ToolsTier.YELLOW_GARNET_TOOL_TIER);
 
-    public static final RegistryObject<HammerItem> FUSION_HAMMER = registerHammerItem("fusion_hammer", AdvancedValuables_ToolsTier.FUSION_TOOL_TIER);
+    public static final RegistryObject<HammerItem> FUSION_HAMMER = registerFireResistantHammerItem("fusion_hammer", AdvancedValuables_ToolsTier.FUSION_TOOL_TIER);
     public static final RegistryObject<HammerItem> RUBY_HAMMER = registerHammerItem("ruby_hammer", AdvancedValuables_ToolsTier.RUBY_TOOL_TIER);
     
     // -- Functions -- //
@@ -353,6 +353,11 @@ public class AdvancedValuables_ItemClass
     private static RegistryObject<HammerItem> registerHammerItem(String name, Tier tier)
     {
         return ITEMS.register(name, () -> new HammerItem(tier, new Item.Properties().attributes(HammerItem.createAttributes(tier, 7, -3.5f))));
+    }
+
+    private static RegistryObject<HammerItem> registerFireResistantHammerItem(String name, Tier tier)
+    {
+        return ITEMS.register(name, () -> new HammerItem(tier, new Item.Properties().attributes(HammerItem.createAttributes(tier, 7, -3.5f)).fireResistant()));
     }
 
     public static void register(IEventBus eventBus)
